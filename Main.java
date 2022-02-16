@@ -25,7 +25,7 @@ public class Main {
 
             Department dp1 = new Department("SWE", 35); // department , departmentCode
             Semester sem1 = new Semester("Fall 2019", 193); // semesterName , semesterCode
-            Student student1 = new Student(dp1, sem1, 30);
+            Student student1 = new Student(dp1, sem1, 30,2948);
             student1.show();
         } else if (select == 2) {
             Teacher t1 = new Teacher("Mr. Md. Mushfiqur Rahman,", 710001444, "Lecturer", "Software Engineering");
