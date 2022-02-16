@@ -6,17 +6,18 @@ public class Student extends Person{
     
     private String ID;
     private int batch;
-    
+    private int serial;
     private Admission admission = new Admission();
     private Semester semester = new Semester();
     private Department department = new Department();
 
   
     public Student(){};
-    public Student(Department dept , Semester sem , int batch){
+    public Student(Department dept , Semester sem , int batch, int serial){
         this.department = dept;
         this.semester= sem;
         this.batch= batch;
+        this.serial=serial;
         this.ID = getGenerateID();
         
     };
@@ -27,7 +28,7 @@ public class Student extends Person{
     
  
     public String getGenerateID(){
-        return ""+department.getDepartmentCode() +"-" +semester.getSemesterCode() +"....";
+        return ""+department.getDepartmentCode() +"-" +semester.getSemesterCode() +"-"+serial;
     }
     
     @Override
